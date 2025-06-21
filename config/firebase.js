@@ -6,9 +6,7 @@ let db = null;
 const initializeFirebase = () => {
     try {
         if (!admin.apps.length) {
-            const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT_KEY);
-
-            
+            const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT_KEY);  
             admin.initializeApp({
                 credential: cert(serviceAccount),
                 projectId: process.env.FIREBASE_PROJECT_ID
